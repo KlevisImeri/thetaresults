@@ -5,4 +5,6 @@ Generating the index.html
 tree -H '.' -L 3 --noreport --dirsfirst ./results | sed '/<p class="VERSION">/,/<\/p>/d' > ./results/index.html
 ```
 
-2:Expl(100,true) -> PredCart() | 1:Expl() | 1:PredCart()
+2:Expl(100,tru2:Expl(100,true) -> PredCart() | 1:Expl() | 1:PredCart()e) -> PredCart() | 1:Expl() | 1:PredCart()
+
+2:Expl(100,true) -> PredCart() | 1:Expl(100) -> PredCart() 
