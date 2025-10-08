@@ -1,7 +1,7 @@
 #!/usr/bin/env bun
 import { $ } from "bun";
 
-const mergedName = "4:PredCart(100, true, true) -> Kind() | 2:PredCart(100, true) -> KInd()";
+const mergedName = "4:PredCart(100, true, true) -> KInd() | 2:PredCart(100, true) -> KInd()";
 
 
 const individualFolders = mergedName.split(' | ');
