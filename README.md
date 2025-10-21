@@ -5,3 +5,4 @@ Generating the index.html
 tree -H '.' -L 3 --noreport --dirsfirst ./results | sed '/<p class="VERSION">/,/<\/p>/d' > ./results/index.html
 ```
 
+edit
