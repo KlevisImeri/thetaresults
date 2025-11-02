@@ -1,0 +1,226 @@
+tools/baseline/theta-start.sh sv-benchmarks/c/loops-crafted-1/vnew1.c --svcomp --portfolio 'PredCart(100) -> KInd()' --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000
+
+
+--------------------------------------------------------------------------------
+
+
+LD_LIBRARY_PATH=/tmp/vcloud_worker_meres_on_bme-233008/run_dir_d63e04b7-0ea3-4f86-8383-516cfd9a577b/tools/baseline/lib /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xss120m -Xmx14210m -jar /tmp/vcloud_worker_meres_on_bme-233008/run_dir_d63e04b7-0ea3-4f86-8383-516cfd9a577b/tools/baseline/theta.jar --svcomp --portfolio PredCart(100) -> KInd() --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000 --input sv-benchmarks/c/loops-crafted-1/vnew1.c --smt-home /tmp/vcloud_worker_meres_on_bme-233008/run_dir_d63e04b7-0ea3-4f86-8383-516cfd9a577b/tools/baseline/solvers
+Arithmetic: [NONLIN_INT]
+ParsingResult Success
+Alias graph size: 0 -> []
+PARTS: [PredCart(100), KInd()]
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=CEGAR, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=100000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=true, specConfig=CegarConfig(initPrec=EMPTY, porLevel=NOPOR, porRandomSeed=0, coi=NO_COI, cexMonitor=CHECK, iterationTimeHeuristic=false, abstractorConfig=CegarAbstractorConfig(abstractionSolver=Z3, validateAbstractionSolver=false, domain=PRED_CART, maxEnum=2, search=ERR, havocMemory=false), refinerConfig=CegarRefinerConfig(refinementSolver=Z3, validateRefinementSolver=false, refinement=SEQ_ITP, exprSplitter=CONJUNCTS, pruneStrategy=LAZY))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(100) -> KInd()/PredCart(100), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult10856807987865673799.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult10856807987865673799.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mCEGARCHEKER: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: Configuration: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: TimeoutMs In Cegar:100000
+server: Iteration 1
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 0
+server: |  |  (Re)initializing ARG...done
+server: |  |  Starting ARG: 1 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 11 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 6
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 3...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 2
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 6
+server: |  |  Starting ARG: 4 nodes, 2 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 19 nodes, 7 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 10
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 3...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 3
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 7
+server: |  |  Starting ARG: 4 nodes, 2 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 19 nodes, 7 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 9
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 4
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 25
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 23 nodes, 8 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 8
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 43s to run! 
+server: Iteration 5
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 41
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 27 nodes, 9 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 10
+server: |  |  Checking trace...done, result: (ExprTraceStatus Feasible)
+server: Refining abstraction done, result: (RefinerResult Unsafe)
+server: ! Precision did NOT change in this iteration
+server: Iteration took 91s to run! 
+server: 
+server: ----------Timeout Exceeded & Solver Interrupted (100000 ms)----------
+server: |  |  PrecisionSize: 41
+server: |  |  Starting ARG: 27 nodes, 9 incomplete, 1 unsafe
+server: |  |  (StopCriterion FullExploration)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 38 nodes, 2 incomplete, 2 unsafe
+server: Abstractor unrolled successfully!
+server: (SafetyResult Partial)
+server: AlgorithmTimeMs: 136117
+server: Iterations: 5
+server: 
+server: Backend finished (in 197814 ms)
+server: (SafetyResult Partial)
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult10856807987865673799.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mLocationInvariants(
+server:   main_final[(PredState (or
+server:              (and
+server:                (not (<= (mod main::n 4294967296) 0))
+server:                (>= main::n 0)
+server:                (not (>= main::n 4294967296))
+server:                (<= main::n 4294967295)
+server:                (or
+server:                  (and
+server:                    (<=
+server: [INFO] Successfully wrote LocationInvariants to /dev/shm/partialResult10856807987865673799.json
+server: Writing post-verification artifacts to directory /tmp/vcloud_worker_meres_on_bme-233008/run_dir_d63e04b7-0ea3-4f86-8383-516cfd9a577b/./output/PredCart(100) -> KInd()/PredCart(100)/7152140615940963429
+Backend finished (in 476843 ms)
+(SafetyResult Partial)
+Caught exception: hu.bme.mit.theta.common.exception.NotSolvableException: Task is not solvable with this configuration!
+Handling exception as Anything
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=BOUNDED, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=700000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=true, specConfig=BoundedConfig(maxBound=0, reversed=false, cegar=false, initPrec=EMPTY, bmcConfig=BMCConfig(disable=false, nonLfPath=false, bmcSolver=Z3, validateBMCSolver=false), indConfig=InductionConfig(disable=false, indSolver=Z3, validateIndSolver=false, indMinBound=0, indFreq=1), itpConfig=InterpolationConfig(disable=true, itpSolver=Z3, validateItpSolver=false))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(100) -> KInd()/KInd(), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult10856807987865673799.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Exception in thread "main" java.lang.OutOfMemoryError: Java heap space
+server: 	at java.base/java.util.ArrayList.grow(ArrayList.java:239)
+server: 	at java.base/java.util.ArrayList.grow(ArrayList.java:244)
+server: 	at java.base/java.util.ArrayList.add(ArrayList.java:454)
+server: 	at java.base/java.util.ArrayList.add(ArrayList.java:467)
+server: 	at org.antlr.v4.runtime.ParserRuleContext.addAnyChild(ParserRuleContext.java:136)
+server: 	at org.antlr.v4.runtime.ParserRuleContext.addChild(ParserRuleContext.java:141)
+server: 	at org.antlr.v4.runtime.Parser.addContextToParseTree(Parser.java:617)
+server: 	at org.antlr.v4.runtime.Parser.enterRule(Parser.java:629)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bvExtract(ExprParser.java:2712)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.primeExpr(ExprParser.java:2645)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.arrayWrite(ExprParser.java:2570)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.arrayRead(ExprParser.java:2492)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.functionCall(ExprParser.java:2402)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bitwiseNotExpr(ExprParser.java:2325)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.unaryExpr(ExprParser.java:2245)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bvExtendExpr(ExprParser.java:2148)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bvConcatExpr(ExprParser.java:2057)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.multiplicativeExpr(ExprParser.java:1955)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.additiveExpr(ExprParser.java:1841)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bitwiseShiftExpr(ExprParser.java:1748)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bitwiseAndExpr(ExprParser.java:1651)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bitwiseXorExpr(ExprParser.java:1572)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.bitwiseOrExpr(ExprParser.java:1480)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.relationExpr(ExprParser.java:1392)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.equalityExpr(ExprParser.java:1293)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.notExpr(ExprParser.java:1215)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.andExpr(ExprParser.java:1128)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.xorExpr(ExprParser.java:1050)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.orExpr(ExprParser.java:959)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.fpFuncExpr(ExprParser.java:872)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.quantifiedExpr(ExprParser.java:651)
+server: 	at hu.bme.mit.theta.grammar.dsl.gen.ExprParser.implyExpr(ExprParser.java:571)
+Backend finished (in 39033 ms)
+ErrorCodeException(code=1)
+	at hu.bme.mit.theta.xcfa.cli.checkers.InProcessChecker.check(InProcessChecker.kt:182)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:320)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:58)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.specFromNamePortfolio$checker(specFromNamePortfolio.kt:82)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.access$specFromNamePortfolio$checker(specFromNamePortfolio.kt:1)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.ConfigNode.execute(stm.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute(stm.kt:159)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute$default(stm.kt:154)
+	at hu.bme.mit.theta.xcfa.cli.checkers.ConfigToPortfolioKt.getPortfolioChecker$lambda$0(ConfigToPortfolio.kt:136)
+	at hu.bme.mit.theta.analysis.algorithm.SafetyChecker.check(SafetyChecker.java:27)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:320)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:58)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig$default(ExecuteConfig.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.run(XcfaCli.kt:127)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.access$run(XcfaCli.kt:37)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli$Companion.main(XcfaCli.kt:137)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.main(XcfaCli.kt)
+Caught exception: ErrorCodeException(code=1)
+Could not handle trigger ErrorCodeException(code=1) (Available triggers: [])
+Backend finished (in 523527 ms)
+ErrorCodeException(code=1)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitProcess(ExitCodes.kt:46)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:61)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.specFromNamePortfolio$checker(specFromNamePortfolio.kt:82)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.access$specFromNamePortfolio$checker(specFromNamePortfolio.kt:1)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.ConfigNode.execute(stm.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute(stm.kt:159)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute$default(stm.kt:154)
+	at hu.bme.mit.theta.xcfa.cli.checkers.ConfigToPortfolioKt.getPortfolioChecker$lambda$0(ConfigToPortfolio.kt:136)
+	at hu.bme.mit.theta.analysis.algorithm.SafetyChecker.check(SafetyChecker.java:27)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:320)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:58)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig$default(ExecuteConfig.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.run(XcfaCli.kt:127)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.access$run(XcfaCli.kt:37)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli$Companion.main(XcfaCli.kt:137)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.main(XcfaCli.kt)

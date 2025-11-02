@@ -1,0 +1,1355 @@
+tools/baseline/theta-start.sh sv-benchmarks/c/loop-new/count_by_k.i --svcomp --portfolio 'PredCart(900, true, true) -> KInd()' --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000
+
+
+--------------------------------------------------------------------------------
+
+
+LD_LIBRARY_PATH=/tmp/vcloud_worker_meres_on_bme-233008/run_dir_907d5ac0-5dd9-4300-8155-4d915de0a6e9/tools/baseline/lib /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xss120m -Xmx14210m -jar /tmp/vcloud_worker_meres_on_bme-233008/run_dir_907d5ac0-5dd9-4300-8155-4d915de0a6e9/tools/baseline/theta.jar --svcomp --portfolio PredCart(900, true, true) -> KInd() --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000 --input sv-benchmarks/c/loop-new/count_by_k.i --smt-home /tmp/vcloud_worker_meres_on_bme-233008/run_dir_907d5ac0-5dd9-4300-8155-4d915de0a6e9/tools/baseline/solvers
+Arithmetic: [NONLIN_INT]
+ParsingResult Success
+Alias graph size: 0 -> []
+PARTS: [PredCart(900, true, true), KInd()]
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=CEGAR, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=900000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=false, specConfig=CegarConfig(initPrec=EMPTY, porLevel=NOPOR, porRandomSeed=0, coi=NO_COI, cexMonitor=CHECK, iterationTimeHeuristic=true, abstractorConfig=CegarAbstractorConfig(abstractionSolver=Z3, validateAbstractionSolver=false, domain=PRED_CART, maxEnum=2, search=ERR, havocMemory=false), refinerConfig=CegarRefinerConfig(refinementSolver=Z3, validateRefinementSolver=false, refinement=SEQ_ITP, exprSplitter=CONJUNCTS, pruneStrategy=LAZY))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(900, true, true) -> KInd()/PredCart(900, true, true), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult8852137001101607264.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult8852137001101607264.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mCEGARCHEKER: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: Configuration: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: TimeoutMs In Cegar:900000
+server: Iteration 1
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 0
+server: |  |  (Re)initializing ARG...done
+server: |  |  Starting ARG: 1 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 9 nodes, 4 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 5
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 3...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 0.200s, Real 0.228s 
+server:               Weight 1.7 -> 1.0247532567454738 
+server: Iteration 2
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 4
+server: |  |  Starting ARG: 4 nodes, 2 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 13 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 6
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 3...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 0.261s, Real 0.355s 
+server:               Weight 1.0247532567454738 -> 1.041150585533499 
+server: Iteration 3
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 7
+server: |  |  Starting ARG: 4 nodes, 2 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 17 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 8
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 0.452s, Real 0.539s 
+server:               Weight 1.041150585533499 -> 1.0361770940970605 
+server: Iteration 4
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 10
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 21 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 10
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 0.677s, Real 0.799s 
+server:               Weight 1.0361770940970605 -> 1.0327298509642298 
+server: Iteration 5
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 12
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 25 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 12
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 0.994s, Real 1.090s 
+server:               Weight 1.0327298509642298 -> 1.0274141820982474 
+server: Iteration 6
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 14
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 29 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 14
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 1.320s, Real 1.436s 
+server:               Weight 1.0274141820982474 -> 1.023701240916677 
+server: Iteration 7
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 16
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 33 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 16
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 1.706s, Real 1.695s 
+server:               Weight 1.023701240916677 -> 1.01857367244735 
+server: Iteration 8
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 18
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 37 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 18
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 1.946s, Real 2.016s 
+server:               Weight 1.01857367244735 -> 1.0160177774323376 
+server: Iteration 9
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 20
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 41 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 20
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 2.277s, Real 2.355s 
+server:               Weight 1.0160177774323376 -> 1.0140759050040773 
+server: Iteration 10
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 22
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 45 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 22
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 2.627s, Real 2.821s 
+server:               Weight 1.0140759050040773 -> 1.0133105346909677 
+server: Iteration 11
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 24
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 49 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 24
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 3.136s, Real 3.367s 
+server:               Weight 1.0133105346909677 -> 1.0126747560950293 
+server: Iteration 12
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 26
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 53 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 26
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 3.732s, Real 4.059s 
+server:               Weight 1.0126747560950293 -> 1.012344564471266 
+server: Iteration 13
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 28
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 57 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 28
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 4.497s, Real 4.777s 
+server:               Weight 1.012344564471266 -> 1.0116855716032365 
+server: Iteration 14
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 30
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 61 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 30
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: ExplPreictor: Predicted 5.274s, Real 5.685s 
+server:               Weight 1.0116855716032365 -> 1.0113306322573374 
+server: Iteration 15
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 32
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 65 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 32
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 6.270s, Real 6.714s 
+server:               Weight 1.0113306322573374 -> 1.0109237261571413 
+server: Iteration 16
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 34
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 69 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 34
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 7.392s, Real 7.855s 
+server:               Weight 1.0109237261571413 -> 1.0104655851619264 
+server: Iteration 17
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 36
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 73 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 36
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 8.628s, Real 9.202s 
+server:               Weight 1.0104655851619264 -> 1.0101052367224064 
+server: Iteration 18
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 38
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 77 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 38
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 10.091s, Real 10.499s 
+server:               Weight 1.0101052367224064 -> 1.0095032887391213 
+server: Iteration 19
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 40
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 81 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 40
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 11.465s, Real 11.952s 
+server:               Weight 1.0095032887391213 -> 1.0089988190646673 
+server: Iteration 20
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 42
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 85 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 42
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 1s to run! 
+server: ExplPreictor: Predicted 13.006s, Real 13.796s 
+server:               Weight 1.0089988190646673 -> 1.0087311926803737 
+server: Iteration 21
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 44
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 89 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 44
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 2s to run! 
+server: ExplPreictor: Predicted 14.993s, Real 16.159s 
+server:               Weight 1.0087311926803737 -> 1.0086424989408822 
+server: Iteration 22
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 46
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 93 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 46
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 2s to run! 
+server: ExplPreictor: Predicted 17.571s, Real 18.972s 
+server:               Weight 1.0086424989408822 -> 1.0085698806106878 
+server: Iteration 23
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 48
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 97 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 48
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 2s to run! 
+server: ExplPreictor: Predicted 20.643s, Real 21.800s 
+server:               Weight 1.0085698806106878 -> 1.0082928010573282 
+server: Iteration 24
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 50
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 101 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 50
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 3s to run! 
+server: ExplPreictor: Predicted 23.683s, Real 24.886s 
+server:               Weight 1.0082928010573282 -> 1.007996592854395 
+server: Iteration 25
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 52
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 105 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 52
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 3s to run! 
+server: ExplPreictor: Predicted 26.984s, Real 28.027s 
+server:               Weight 1.007996592854395 -> 1.0076293550593933 
+server: Iteration 26
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 54
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 109 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 54
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 2s to run! 
+server: ExplPreictor: Predicted 30.305s, Real 30.945s 
+server:               Weight 1.0076293550593933 -> 1.0071600253192197 
+server: Iteration 27
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 56
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 113 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 56
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 4s to run! 
+server: ExplPreictor: Predicted 33.323s, Real 34.993s 
+server:               Weight 1.0071600253192197 -> 1.006958905573544 
+server: Iteration 28
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 58
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 117 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 58
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 4s to run! 
+server: ExplPreictor: Predicted 37.636s, Real 39.664s 
+server:               Weight 1.006958905573544 -> 1.0068006286450326 
+server: Iteration 29
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 60
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 121 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 60
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 5s to run! 
+server: ExplPreictor: Predicted 42.625s, Real 44.753s 
+server:               Weight 1.0068006286450326 -> 1.006625115593884 
+server: Iteration 30
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 62
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 125 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 62
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 5s to run! 
+server: ExplPreictor: Predicted 48.043s, Real 50.721s 
+server:               Weight 1.006625115593884 -> 1.006501886637614 
+server: Iteration 31
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 64
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 129 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 64
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 6s to run! 
+server: ExplPreictor: Predicted 54.423s, Real 56.873s 
+server:               Weight 1.006501886637614 -> 1.0063143648576105 
+server: Iteration 32
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 66
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 133 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 66
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 6s to run! 
+server: ExplPreictor: Predicted 60.944s, Real 63.111s 
+server:               Weight 1.0063143648576105 -> 1.0060789867817717 
+server: Iteration 33
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 68
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 137 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 68
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 5s to run! 
+server: ExplPreictor: Predicted 67.497s, Real 68.668s 
+server:               Weight 1.0060789867817717 -> 1.0057453522249633 
+server: Iteration 34
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 70
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 141 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 70
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 6s to run! 
+server: ExplPreictor: Predicted 73.205s, Real 74.808s 
+server:               Weight 1.0057453522249633 -> 1.0054701714431034 
+server: Iteration 35
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 72
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 145 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 72
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 8s to run! 
+server: ExplPreictor: Predicted 79.544s, Real 82.995s 
+server:               Weight 1.0054701714431034 -> 1.0053491493082323 
+server: Iteration 36
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 74
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 149 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 74
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 9s to run! 
+server: ExplPreictor: Predicted 88.179s, Real 92.315s 
+server:               Weight 1.0053491493082323 -> 1.0052565580667627 
+server: Iteration 37
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 76
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 153 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 76
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 8s to run! 
+server: ExplPreictor: Predicted 98.033s, Real 101.310s 
+server:               Weight 1.0052565580667627 -> 1.0050910191060032 
+server: Iteration 38
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 78
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 157 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 78
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 11s to run! 
+server: ExplPreictor: Predicted 107.433s, Real 113.007s 
+server:               Weight 1.0050910191060032 -> 1.005041655208993 
+server: Iteration 39
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 80
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 161 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 80
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 12s to run! 
+server: ExplPreictor: Predicted 119.834s, Real 125.191s 
+server:               Weight 1.005041655208993 -> 1.00495382723658 
+server: Iteration 40
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 82
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 165 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 82
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 11s to run! 
+server: ExplPreictor: Predicted 132.686s, Real 136.601s 
+server:               Weight 1.00495382723658 -> 1.0047877739891329 
+server: Iteration 41
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 84
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 169 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 84
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 14s to run! 
+server: ExplPreictor: Predicted 144.558s, Real 150.843s 
+server:               Weight 1.0047877739891329 -> 1.0047083566464845 
+server: Iteration 42
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 86
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 173 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 86
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 13s to run! 
+server: ExplPreictor: Predicted 159.554s, Real 164.665s 
+server:               Weight 1.0047083566464845 -> 1.0045729520445865 
+server: Iteration 43
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 88
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 177 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 88
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 12s to run! 
+server: ExplPreictor: Predicted 173.963s, Real 177.512s 
+server:               Weight 1.0045729520445865 -> 1.0043860413499972 
+server: Iteration 44
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 90
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 181 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 90
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 13s to run! 
+server: ExplPreictor: Predicted 187.176s, Real 191.315s 
+server:               Weight 1.0043860413499972 -> 1.0042215438599909 
+server: Iteration 45
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 92
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 185 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 92
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 15s to run! 
+server: ExplPreictor: Predicted 201.394s, Real 206.932s 
+server:               Weight 1.0042215438599909 -> 1.0040957612743364 
+server: Iteration 46
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 94
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 189 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 94
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 14s to run! 
+server: ExplPreictor: Predicted 217.571s, Real 221.762s 
+server:               Weight 1.0040957612743364 -> 1.0039375596953075 
+server: Iteration 47
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 96
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 193 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 96
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 16s to run! 
+server: ExplPreictor: Predicted 232.775s, Real 237.794s 
+server:               Weight 1.0039375596953075 -> 1.0038015905519078 
+server: Iteration 48
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 98
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 197 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 98
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 16s to run! 
+server: ExplPreictor: Predicted 249.252s, Real 254.328s 
+server:               Weight 1.0038015905519078 -> 1.0036690508046677 
+server: Iteration 49
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 100
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 201 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 100
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 18s to run! 
+server: ExplPreictor: Predicted 266.212s, Real 272.987s 
+server:               Weight 1.0036690508046677 -> 1.0035693357423008 
+server: Iteration 50
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 102
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 205 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 102
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 19s to run! 
+server: ExplPreictor: Predicted 285.460s, Real 292.595s 
+server:               Weight 1.0035693357423008 -> 1.0034737240984775 
+server: Iteration 51
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 104
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 209 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 104
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 19s to run! 
+server: ExplPreictor: Predicted 305.672s, Real 312.051s 
+server:               Weight 1.0034737240984775 -> 1.0033651508271335 
+server: Iteration 52
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 106
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 213 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 106
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 23s to run! 
+server: ExplPreictor: Predicted 325.623s, Real 335.946s 
+server:               Weight 1.0033651508271335 -> 1.003312130303379 
+server: Iteration 53
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 108
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 217 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 108
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 24s to run! 
+server: ExplPreictor: Predicted 350.407s, Real 360.699s 
+server:               Weight 1.003312130303379 -> 1.0032514654799898 
+server: Iteration 54
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 110
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 221 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 110
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 28s to run! 
+server: ExplPreictor: Predicted 376.022s, Real 389.115s 
+server:               Weight 1.0032514654799898 -> 1.003217730412753 
+server: Iteration 55
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 112
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 225 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 112
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 30s to run! 
+server: ExplPreictor: Predicted 405.570s, Real 419.895s 
+server:               Weight 1.003217730412753 -> 1.0031874045279363 
+server: Iteration 56
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 114
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 229 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 114
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 33s to run! 
+server: ExplPreictor: Predicted 437.587s, Real 453.732s 
+server:               Weight 1.0031874045279363 -> 1.0031647532898742 
+server: Iteration 57
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 116
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 233 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 116
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 30s to run! 
+server: ExplPreictor: Predicted 472.826s, Real 483.950s 
+server:               Weight 1.0031647532898742 -> 1.0030863479461123 
+server: Iteration 58
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 118
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 237 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 118
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 34s to run! 
+server: ExplPreictor: Predicted 503.902s, Real 518.927s 
+server:               Weight 1.0030863479461123 -> 1.0030386635263746 
+server: Iteration 59
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 120
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 241 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 120
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 37s to run! 
+server: ExplPreictor: Predicted 540.098s, Real 556.864s 
+server:               Weight 1.0030386635263746 -> 1.002998304125477 
+server: Iteration 60
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 122
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 245 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 122
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 41s to run! 
+server: ExplPreictor: Predicted 579.398s, Real 598.573s 
+server:               Weight 1.002998304125477 -> 1.0029680591581749 
+server: Iteration 61
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 124
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 249 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 124
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 44s to run! 
+server: ExplPreictor: Predicted 622.679s, Real 643.270s 
+server:               Weight 1.0029680591581749 -> 1.0029388033235704 
+server: Iteration 62
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 126
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 253 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 126
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 36s to run! 
+server: ExplPreictor: Predicted 669.057s, Real 679.884s 
+server:               Weight 1.0029388033235704 -> 1.0028430409297615 
+server: Iteration 63
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 128
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 257 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 128
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 47s to run! 
+server: ExplPreictor: Predicted 706.345s, Real 727.572s 
+server:               Weight 1.0028430409297615 -> 1.0028078667610787 
+server: Iteration 64
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 130
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 261 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 130
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 48s to run! 
+server: ExplPreictor: Predicted 755.676s, Real 775.994s 
+server:               Weight 1.0028078667610787 -> 1.0027618386220494 
+server: Iteration 65
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 132
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 265 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 132
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 53s to run! 
+server: ExplPreictor: Predicted 805.611s, Real 829.366s 
+server:               Weight 1.0027618386220494 -> 1.0027280831530123 
+server: Iteration 66
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 134
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 269 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 134
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 4...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 56s to run! 
+server: ExplPreictor: Predicted 860.782s, Real 886.073s 
+server:               Weight 1.0027280831530123 -> 1.0026953407474979 
+server: --------Iteration time heuristic predicts timeout--------
+server: |  |  PrecisionSize: 134
+server: |  |  Starting ARG: 8 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FullExploration)...
+server: |  |  Building ARG...
+The process run out of time so it got destroied!
+Backend finished (in 900271 ms)
+ErrorCodeException(code=201)
+	at hu.bme.mit.theta.xcfa.cli.checkers.InProcessChecker.check(InProcessChecker.kt:168)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:320)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:58)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.specFromNamePortfolio$checker(specFromNamePortfolio.kt:82)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt.access$specFromNamePortfolio$checker(specFromNamePortfolio.kt:1)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.SpecFromNamePortfolioKt$specFromNamePortfolio$configNodes$1$1.invoke(specFromNamePortfolio.kt:122)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.ConfigNode.execute(stm.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute(stm.kt:159)
+	at hu.bme.mit.theta.xcfa.cli.portfolio.STM.execute$default(stm.kt:154)
+	at hu.bme.mit.theta.xcfa.cli.checkers.ConfigToPortfolioKt.getPortfolioChecker$lambda$0(ConfigToPortfolio.kt:136)
+	at hu.bme.mit.theta.analysis.algorithm.SafetyChecker.check(SafetyChecker.java:27)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:320)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt$backend$result$1.invoke(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.params.ExitCodesKt.exitOnError(ExitCodes.kt:58)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend(ExecuteConfig.kt:318)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.backend$default(ExecuteConfig.kt:275)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig(ExecuteConfig.kt:105)
+	at hu.bme.mit.theta.xcfa.cli.ExecuteConfigKt.runConfig$default(ExecuteConfig.kt:74)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.run(XcfaCli.kt:127)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.access$run(XcfaCli.kt:37)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli$Companion.main(XcfaCli.kt:137)
+	at hu.bme.mit.theta.xcfa.cli.XcfaCli.main(XcfaCli.kt)
+Caught exception: ErrorCodeException(code=201)
+Handling exception as Anything
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=BOUNDED, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=700000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=true, specConfig=BoundedConfig(maxBound=0, reversed=false, cegar=false, initPrec=EMPTY, bmcConfig=BMCConfig(disable=false, nonLfPath=false, bmcSolver=Z3, validateBMCSolver=false), indConfig=InductionConfig(disable=false, indSolver=Z3, validateIndSolver=false, indMinBound=0, indFreq=1), itpConfig=InterpolationConfig(disable=true, itpSolver=Z3, validateItpSolver=false))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(900, true, true) -> KInd()/KInd(), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult8852137001101607264.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult8852137001101607264.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mStarting iteration 1
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 2
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 3
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 4
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 5
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 6
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 7
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 8
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 9
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 10
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 11
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 12
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 13
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 14
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 15
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 16
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 17
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 18
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 19
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 20
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 21
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 22
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 23
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 24
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 25
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 26
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 27
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 28
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 29
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 30
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 31
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 32
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 33
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 34
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 35
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 36
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 37
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 38
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 39
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 40
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 41
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 42
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 43
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 44
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 45
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 46
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 47
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 48
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 49
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 50
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 51
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 52
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 53
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 54
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 55
+server: 	Starting BMC
+server: 	Starting k-induction

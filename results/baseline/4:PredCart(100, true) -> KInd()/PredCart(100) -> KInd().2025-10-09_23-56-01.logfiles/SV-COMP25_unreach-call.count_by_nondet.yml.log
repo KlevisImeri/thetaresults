@@ -1,0 +1,594 @@
+tools/baseline/theta-start.sh sv-benchmarks/c/loop-new/count_by_nondet.i --svcomp --portfolio 'PredCart(100) -> KInd()' --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000
+
+
+--------------------------------------------------------------------------------
+
+
+LD_LIBRARY_PATH=/tmp/vcloud_worker_meres_on_bme-233008/run_dir_69ba4406-76f6-4b27-a7e1-8b47ed1a9ca7/tools/baseline/lib /usr/lib/jvm/java-17-openjdk-amd64/bin/java -Xss120m -Xmx14210m -jar /tmp/vcloud_worker_meres_on_bme-233008/run_dir_69ba4406-76f6-4b27-a7e1-8b47ed1a9ca7/tools/baseline/theta.jar --svcomp --portfolio PredCart(100) -> KInd() --loglevel RESULT --output-directory ./output --property sv-benchmarks/c/properties/unreach-call.prp --architecture ILP32 --memlimit 15000000000 --input sv-benchmarks/c/loop-new/count_by_nondet.i --smt-home /tmp/vcloud_worker_meres_on_bme-233008/run_dir_69ba4406-76f6-4b27-a7e1-8b47ed1a9ca7/tools/baseline/solvers
+Arithmetic: []
+ParsingResult Success
+Alias graph size: 0 -> []
+PARTS: [PredCart(100), KInd()]
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=CEGAR, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=100000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=true, specConfig=CegarConfig(initPrec=EMPTY, porLevel=NOPOR, porRandomSeed=0, coi=NO_COI, cexMonitor=CHECK, iterationTimeHeuristic=false, abstractorConfig=CegarAbstractorConfig(abstractionSolver=Z3, validateAbstractionSolver=false, domain=PRED_CART, maxEnum=2, search=ERR, havocMemory=false), refinerConfig=CegarRefinerConfig(refinementSolver=Z3, validateRefinementSolver=false, refinement=SEQ_ITP, exprSplitter=CONJUNCTS, pruneStrategy=LAZY))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(100) -> KInd()/PredCart(100), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult17781161186822532213.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult17781161186822532213.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mCEGARCHEKER: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: Configuration: (CegarChecker (XcfaArgAbstractor (PriorityWaitlist XcfaDistToErrComparator)) (XcfaSingleExprTraceRefiner ExprTraceSeqItpChecker XcfaPrecRefiner))
+server: TimeoutMs In Cegar:100000
+server: Iteration 1
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 0
+server: |  |  (Re)initializing ARG...done
+server: |  |  Starting ARG: 1 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 7 nodes, 3 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 4
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 2
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 1
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 11 nodes, 4 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 6
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 3
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 2
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 15 nodes, 5 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 8
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 4
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 6
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 21 nodes, 7 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 10
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 5
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 7
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 27 nodes, 9 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 12
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 6
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 8
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 33 nodes, 11 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 14
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 7
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 10
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 45 nodes, 15 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 18
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 8
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 14
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 69 nodes, 23 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 26
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 9
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 22
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 117 nodes, 39 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 42
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 0s to run! 
+server: Iteration 10
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 38
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 213 nodes, 71 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 74
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 2s to run! 
+server: Iteration 11
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 70
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 405 nodes, 135 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 138
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 6...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 8s to run! 
+server: Iteration 12
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 134
+server: |  |  Starting ARG: 10 nodes, 3 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 789 nodes, 263 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 266
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 35s to run! 
+server: Iteration 13
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 135
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 795 nodes, 265 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 268
+server: |  |  Checking trace...done, result: (ExprTraceStatus Infeasible)
+server: |  |  Pruning from index 2...done
+server: Refining abstraction done, result: (RefinerResult Spurious)
+server: ! Precision DID change in this iteration
+server: Iteration took 48s to run! 
+server: Iteration 14
+server: | Checking abstraction...
+server: |  |  PrecisionSize: 136
+server: |  |  Starting ARG: 2 nodes, 1 incomplete, 0 unsafe
+server: |  |  (StopCriterion FirstCex)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 801 nodes, 267 incomplete, 1 unsafe
+server: | Checking abstraction done, result: (AbstractorResult Unsafe)
+server: | Refining abstraction...
+server: |  |  Trace length: 270
+server: |  |  Checking trace...done, result: (ExprTraceStatus Feasible)
+server: Refining abstraction done, result: (RefinerResult Unsafe)
+server: ! Precision did NOT change in this iteration
+server: Iteration took 48s to run! 
+server: 
+server: ----------Timeout Exceeded & Solver Interrupted (100000 ms)----------
+server: |  |  PrecisionSize: 136
+server: |  |  Starting ARG: 801 nodes, 267 incomplete, 1 unsafe
+server: |  |  (StopCriterion FullExploration)...
+server: |  |  Building ARG...
+server: |  |  Finished ARG: 805 nodes, 1 incomplete, 1 unsafe
+server: Abstractor unrolled successfully!
+server: (SafetyResult Partial)
+server: AlgorithmTimeMs: 145234
+server: Iterations: 14
+server: 
+server: Backend finished (in 210218 ms)
+server: (SafetyResult Partial)
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult17781161186822532213.json
+server: [33m[WARN] LocationInvariants are empty map. Returning null!
+server: [0mLocationInvariants(
+server:   main_final[(PredState (or
+server:              (and
+server:                (not (>= main::i 1000000))
+server:                (<= main::i 0)
+server:                (<= main::k 0)
+server:                (<= main::k 1)
+server:                (<= main::k 1000000)
+server:                (<= main::k 2)
+server:                (<= main::k 3)
+server: [INFO] Successfully wrote LocationInvariants to /dev/shm/partialResult17781161186822532213.json
+server: Writing post-verification artifacts to directory /tmp/vcloud_worker_meres_on_bme-233008/run_dir_69ba4406-76f6-4b27-a7e1-8b47ed1a9ca7/./output/PredCart(100) -> KInd()/PredCart(100)/17845437848604896621
+Backend finished (in 214600 ms)
+(SafetyResult Partial)
+Caught exception: hu.bme.mit.theta.common.exception.NotSolvableException: Task is not solvable with this configuration!
+Handling exception as Anything
+Current configuration: XcfaConfig(inputConfig=InputConfig(inputFile=null, catFile=null, parseCtx=null, xcfaWCtx=present, propertyFile=null, property=ERROR_LOCATION, partialResult=null, frontendConfig=FrontendConfig(lbeLevel=LBE_SEQ, staticCoi=false, loopUnroll=1000, forceUnroll=-1, enableFew=false, inputType=C, specConfig=CFrontendConfig(arithmetic=efficient, architecture=ILP32)), backendConfig=BackendConfig(backend=BOUNDED, solverHome=/home/benchexec/.theta, timeoutMs=900000, softTimeoutMs=700000, inProcess=true, parseInProcess=false, inPortfolio=true, memlimit=0, disablePartialResult=true, specConfig=BoundedConfig(maxBound=0, reversed=false, cegar=false, initPrec=EMPTY, bmcConfig=BMCConfig(disable=false, nonLfPath=false, bmcSolver=Z3, validateBMCSolver=false), indConfig=InductionConfig(disable=false, indSolver=Z3, validateIndSolver=false, indMinBound=0, indFreq=1), itpConfig=InterpolationConfig(disable=true, itpSolver=Z3, validateItpSolver=false))), outputConfig=OutputConfig(versionInfo=false, enableOutput=true, resultFolder=./output/PredCart(100) -> KInd()/KInd(), acceptUnreliableSafe=false, cOutputConfig=COutputConfig(disable=true, useArr=false, useExArr=false, useRange=false), xcfaOutputConfig=XcfaOutputConfig(disable=true), chcOutputConfig=ChcOutputConfig(disable=true), witnessConfig=WitnessConfig(disable=false, svcomp=true, concretizerSolver=Z3, validateConcretizerSolver=false, inputFileForWitness=null), partialResultOutputConfig=PartialResultOutputConfig(enable=false, tempFileLocation=null), argConfig=ArgConfig(disable=true)), debugConfig=DebugConfig(debug=false, stacktrace=false, logLevel=INFO, argdebug=false, argToFile=false))
+PartialResultJson: /dev/shm/partialResult17781161186822532213.json
+server: Registered Legacy-Z3 SolverManager
+server: Registered Z3 SolverManager
+server: Registered JavaSMT SolverManager
+server: Registered SMT-LIB SolverManager
+server: Successfully loaded LocationInvariants from /dev/shm/partialResult17781161186822532213.json
+server: Starting iteration 1
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 2
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 3
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 4
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 5
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 6
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 7
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 8
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 9
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 10
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 11
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 12
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 13
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 14
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 15
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 16
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 17
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 18
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 19
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 20
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 21
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 22
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 23
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 24
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 25
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 26
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 27
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 28
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 29
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 30
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 31
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 32
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 33
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 34
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 35
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 36
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 37
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 38
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 39
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 40
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 41
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 42
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 43
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 44
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 45
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 46
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 47
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 48
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 49
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 50
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 51
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 52
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 53
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 54
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 55
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 56
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 57
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 58
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 59
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 60
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 61
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 62
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 63
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 64
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 65
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 66
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 67
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 68
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 69
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 70
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 71
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 72
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 73
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 74
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 75
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 76
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 77
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 78
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 79
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 80
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 81
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 82
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 83
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 84
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 85
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 86
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 87
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 88
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 89
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 90
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 91
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 92
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 93
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 94
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 95
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 96
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 97
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 98
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 99
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 100
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 101
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 102
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 103
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 104
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 105
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 106
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 107
+server: 	Starting BMC
+server: 	Starting k-induction
+server: Starting iteration 108
+server: 	Starting BMC

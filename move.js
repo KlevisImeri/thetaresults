@@ -1,6 +1,6 @@
 import { $ } from "bun";
 
-const folder = "PredCart(900, true) -> KInd()";
+const folder = "3:PredCart(100, pRes=false) -> KInd()";
 
 const sourcePath = `~/Cloud/benchcloud/results/baseline/${folder}`;
 const destinationPath = `./results/baseline/`;
