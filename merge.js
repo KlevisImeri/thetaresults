@@ -7,7 +7,7 @@ import { $ } from "bun";
 // const mergedName = "4:PredCart(100, true) -> KInd() | 3:PredCart(100, true) -> KInd() | 2:PredCart(100, true) -> KInd()";
 // const mergedName = "4:PredCart(100, true) -> KInd() | 3:PredCart(100, true) -> KInd()";
 // const mergedName = "4:PredCart(900, true, true) -> KInd() | 4:PredCart()";
-const mergedName = "4:PredCart(900, true, true) -> KInd()  | 4:PredCart(900, true) -> KInd() |  4:PredCart(100, true, true) -> KInd() | 3:PredCart(100, true) -> KInd() |  3:PredCart(100, pRes=false) -> KInd() | 4:PredCart() | 1:Kind()"
+const mergedName = "4:PredCart(900, true, true) -> KInd() | 4:PredCart(900, true) -> KInd() | 4:PredCart(100, true, true) -> KInd() | 3:PredCart(100, true) -> KInd() | 3:PredCart(100, pRes=false) -> KInd() | 4:PredCart() | 1:Kind()"
 
 const individualFolders = mergedName.split(' | ');
 
