@@ -125,7 +125,7 @@ def analyze_heuristic_performance(csv_filepath, logs_dir):
 
 
 if __name__ == "__main__":
-    CSV_FILE_PATH = './results/4:PredCart(900, true, true) -> KInd() | 4:PredCart()/results.2025-11-02_13-31-48.table.csv'
-    LOG_FILES_DIR = './results/baseline/4:PredCart(900, true, true) -> KInd()/PredCart(900, true, true) -> KInd().2025-10-08_08-29-11.logfiles'
+    CSV_FILE_PATH = './results/6:PredCart(900, true, true) -> KInd() | 4:PredCart()/results.2025-12-12_07-41-06.table.csv'
+    LOG_FILES_DIR = './results/baseline/6:PredCart(900, true, true) -> KInd()/PredCart(900, true, true) -> KInd().2025-12-11_23-16-31.logfiles/'
     
     analyze_heuristic_performance(CSV_FILE_PATH, LOG_FILES_DIR)
